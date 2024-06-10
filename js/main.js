@@ -42,16 +42,54 @@ const prev = document.querySelector(".prev");
 next.addEventListener("click",
     function() {
 
+        
+
         // rimuovo la classe active dall'elemento precedente
         items[t].classList.remove("active");
 
         // aumento il valore di "t"
         t++;
 
+        // resetto il valore di t se va oltre la lunghezza massima degli items
+        if (t === items.length) {
+            t = 0;
+        }
+
         // assegno al nuovo "t" la classe active
         items[t].classList.add("active");
+
+        console.log(t);
         
         
     }
 
 )
+
+// evento click prev
+prev.addEventListener("click",
+    function() {
+
+        
+        // rimuovo la classe active dall'elemento precedente
+        items[t].classList.remove("active");
+
+        // cambio il valore di t se esso è uguale a 0 così da riprendere dall'ultima immagine
+        if (t === 0) {
+            t = items.length;
+        }
+
+        // aumento il valore di "t"
+        t--;
+
+        // assegno al nuovo "t" la classe active
+        items[t].classList.add("active");
+        
+        console.log(t);
+        
+        
+    }
+
+    
+
+)
+
