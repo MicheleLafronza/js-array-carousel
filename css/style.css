@@ -1,0 +1,57 @@
+/* REGOLE GENERALI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE MAIN */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 40%;
+    position: relative;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+/* REGOLE BOTTONI */
+
+.prev {
+    margin-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: grey;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.next {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: grey;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-bottom: 8px;
+}
