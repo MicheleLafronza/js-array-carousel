@@ -17,24 +17,11 @@ for (i = 0; i < imgPath.length; i++) {
     let divIt = `
         <div class="item">
             <img src="${imgIt}" alt="">
-            <a href="#" class="prev">
-                    <i class="fa-solid fa-angle-up"></i>
-            </a>
-            <a href="#" class="next">
-                    <i class="fa-solid fa-angle-down"></i>
-            </a>
         </div>`;
         
     // aggiungo la parte nei backtick al container
     container.innerHTML += divIt;
 }
-
-// creo varibile dei tasti prev e next
-let next = document.querySelector(".next");
-
-
-let prev = document.querySelector(".prev");
-
 
 // creo la lista della classe items
 const items = document.getElementsByClassName("item");
@@ -43,10 +30,13 @@ console.log(items);
 // creo variabile "t" che conta come item attivo
 let t = 0;
 
-
 // aggiungo la classe active al primo elemento della lista items
 items[t].classList.add("active");
 
+// creo varibile dei tasti prev e next
+const next = document.querySelector(".next");
+
+const prev = document.querySelector(".prev");
 
 // evento click next
 next.addEventListener("click",
@@ -61,7 +51,7 @@ next.addEventListener("click",
         // assegno al nuovo "t" la classe active
         items[t].classList.add("active");
         
-        console.log(t);
+        
     }
 
 )
