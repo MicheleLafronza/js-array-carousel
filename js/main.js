@@ -1,5 +1,5 @@
 // creo costante del container
-const container = document.querySelector(".container");
+const container = document.querySelector(".interior-container");
 
 
 // creo array con le stringhe delle immagini
